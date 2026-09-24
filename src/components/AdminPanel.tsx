@@ -238,12 +238,23 @@ setLoading(false);
       <div className="flex flex-wrap gap-2">
         {menu.map(([key, label]) => (
           <button
+  style={section === key ? { color: 'white' } : undefined}
+  onMouseEnter={(event) => {
+    if (section !== key) {
+      event.currentTarget.style.setProperty('color', '#404040', 'important');
+    }
+  }}
+  onMouseLeave={(event) => {
+    if (section !== key) {
+      event.currentTarget.style.setProperty('color', '#404040', 'important');
+    }
+  }}
             key={key}
             onClick={() => setSection(key)}
             className={`rounded-xl px-4 py-2 font-medium transition ${
               section === key
                 ? 'bg-[#FF6200] text-white'
-                : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-200'
+                : 'bg-neutral-100 !text-neutral-700 hover:bg-neutral-200 hover:!text-neutral-700 dark:bg-neutral-800 dark:!text-neutral-200 dark:hover:!text-neutral-200'
             }`}
           >
             {label}
