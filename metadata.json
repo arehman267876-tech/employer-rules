@@ -1,0 +1,6 @@
+{
+  "name": "EmployerRules",
+  "description": "Fast, authoritative compliance calculators and verified statutory deadline finders for US small employers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
